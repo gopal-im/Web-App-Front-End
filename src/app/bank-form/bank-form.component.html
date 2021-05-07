@@ -1,0 +1,80 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading stylefont">Customer Details</div>
+            <div class="panel-body">
+
+                <form [formGroup]="CustForm" (ngSubmit)="savecustinfo()" class="form">
+
+                    <div class="form-group">
+                        <label for="enquiryid">Enquiry ID : </label>
+                        <input type="text" formControlName="enquiryid" class="form-control">
+                        <span id="enquiryidError" class="error-message"
+                            *ngIf="!CustForm.controls.enquiryid.valid && CustForm.controls.enquiryid.dirty"> Enquiry ID
+                            is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryid">Customer Name : </label>
+                        <input type="text" formControlName="customername" class="form-control">
+                        <span id="customernameError" class="error-message"
+                            *ngIf="!CustForm.controls.customername.valid && CustForm.controls.customername.dirty">
+                            Customer Name
+                            is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryid">Job type : </label>
+                        <select type="text" class="form-control" formControlName="jobtype">
+                            <option value="">--Select--</option>
+                            <option value="selfemployed">Self Employed</option>
+                            <option value="salaried">Salaried</option>
+                        </select>
+                        <span id="jobtypeError" class="error-message"
+                            *ngIf="!CustForm.controls.jobtype.valid && CustForm.controls.jobtype.dirty"> Please Select
+                            Job type</span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="enquiryid">Loan Amount : </label>
+                        <input type="text" formControlName="loanamount" class="form-control">
+                        <span id="loanamountError" class="error-message"
+                            *ngIf="!CustForm.controls.loanamount.valid && CustForm.controls.loanamount.dirty"> Loan
+                            Amount
+                            is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryid">Loan Interest Rate : </label>
+                        <input type="text" formControlName="interestrate" class="form-control">
+                        <span id="interestrateError" class="error-message"
+                            *ngIf="!CustForm.controls.interestrate.valid && CustForm.controls.interestrate.dirty">
+                            Interest Rate
+                            is required</span><br>
+                    </div>
+
+
+                    <div class="form-group center-align">
+                        <button class="btn btn-primary" type="submit" [disabled]="!CustForm.valid">Submit</button>
+                       
+                    </div>
+                    
+                    
+                </form>
+                <br>
+                <div class="form"><button class="btn btn-primary" title="View Customer Details" (click)="viewCustData()">Customer Data</button></div>
+
+                <div *ngIf="errorMessage!=null">
+                    <span class="text-danger">{{errorMessage}}</span>
+                </div>
+                <div *ngIf="successMessage!=null">
+                    <span class="text-success">{{successMessage}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

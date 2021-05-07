@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+.stylefont{
+    color: darkblue;
+    font-size:large;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.head1{
+    color: aquamarine
+}
+
+.panel-head{
+    background-color: bisque;
+}
+.error-message{
+    color: red;
+    font-size: small;
+}
+
+.panel-heading{
+    background-color:darkturquoise;
+}

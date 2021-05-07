@@ -1,0 +1,37 @@
+.sh-logindetail {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
+.sh-loginBox {
+	position: absolute;
+	display: block;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	border-radius: 15px;
+	background: linear-gradient(to right,rgba(69, 71, 102, 0.61),rgba(159, 160, 173, 0.47));
+	transform: translate(-50%, -50%);
+	animation: loginBoxAnimation 3s;
+	animation-fill-mode: backwards;
+}
+.sh-logoText {	
+	 display: block;	 
+	 font-size: 200%;	
+	letter-spacing: 5px; 
+	text-align: center;		
+	 padding: 10px; 
+	/* mix-blend-mode: multiply; Make this work */
+}
+.sh-login-button{
+    background-color: #ffffff;
+    color: #000000;;
+    width: 40%;    
+    position: relative;    
+    backface-visibility: hidden; 
+    border-radius: 5px;          
+  }
